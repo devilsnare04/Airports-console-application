@@ -1,6 +1,6 @@
 import AssemblyKeys._
 
-name := "Lunatech"
+name := "Lunatech-console-application"
  
 version := "0.1"
  
