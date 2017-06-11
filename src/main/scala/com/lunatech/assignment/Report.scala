@@ -69,10 +69,10 @@ object Report {
     println("Bottom ten Countries in terms of lowest number of airports : (Name, Count)")
     bottomTenAirportsCountries.foreach { x => println(x._1 + ", " + x._2) }
     println("---------------------------------------------------")
-    println("Top 10 most common runway latitude : (Le_ident)")
+    println("Top 10 most common runway latitude :")
     mostCommonRunways.foreach { println }
     println("---------------------------------------------------")
-    println("Country, Set(Types of runways)")
+    println("Country, Types of runways")
     runwaysSurfacePerCountry.foreach { x => println(x._1 + ", " + x._2) }
 
   }

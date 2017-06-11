@@ -69,8 +69,7 @@ object Query {
   def printAirportAndRunways(listAirports: List[AirportAndRunways]): Unit = {
 
     listAirports.size match {
-      case 0 =>
-        println("Please check the supplied input and try again...");
+      case 0 => println("Please check the supplied input and try again...")
       case _ => listAirports.foreach { obj => println("Country : " + obj.country + ", Airport : " + obj.airportName + ", Runways : " + obj.runways) }
     }
 

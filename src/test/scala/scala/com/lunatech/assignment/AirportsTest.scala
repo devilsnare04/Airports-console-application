@@ -5,7 +5,7 @@ import org.scalatest._
 import org.junit.runner.RunWith
 
 @RunWith(classOf[JUnitRunner])
-class AirportTest extends FlatSpec {
+class AirportsTest extends FlatSpec {
 
   "getCodeFromCountryName" should "return Country code" in {
 
