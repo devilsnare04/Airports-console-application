@@ -40,9 +40,9 @@ object Airports {
   /**
    * Loading input files into memory and removing double quotes.
    */
-  val airportsData: List[String] = Source.fromFile(new File(airportsInputFile), "ISO-8859-1").getLines.drop(1).toList map { _.replaceAll("\"", "") }
-  val countriesData: List[String] = Source.fromFile(new File(countriesInputFile), "ISO-8859-1").getLines.drop(1).toList map { _.replaceAll("\"", "") }
-  val runwaysData: List[String] = Source.fromFile(new File(runwaysInputFile), "ISO-8859-1").getLines.drop(1).toList map { _.replaceAll("\"", "") }
+  val airportsData: List[String] = Source.fromFile(new File(airportsInputFile)).getLines.drop(1).toList map { _.replaceAll("\"", "") }
+  val countriesData: List[String] = Source.fromFile(new File(countriesInputFile)).getLines.drop(1).toList map { _.replaceAll("\"", "") }
+  val runwaysData: List[String] = Source.fromFile(new File(runwaysInputFile)).getLines.drop(1).toList map { _.replaceAll("\"", "") }
 
   /**
    * Creating a lookup map for countries.
