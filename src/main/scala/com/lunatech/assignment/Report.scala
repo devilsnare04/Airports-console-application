@@ -8,13 +8,7 @@ import scala.util.Try
  */
 object Report {
 
-  /**
-   * Converting Iterator[String] to List[String]
-   */
-  //val airportDataList: List[String] = airportsData.toList
-  //val runwaysDataList: List[String] = runwaysData.toList
-
-  /**
+   /**
    * A List with Tuple2 of country name and the count of airports.
    */
   val groupByMapAirportsCount: List[(String, Int)] = airportsData.map(_.split(",")(8)).groupBy(identity).mapValues { _.size }.toList
