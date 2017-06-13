@@ -8,10 +8,11 @@ import scala.util.Try
  */
 object Report {
 
-   /**
+  /**
    * A List with Tuple2 of country name and the count of airports.
    */
-  val groupByMapAirportsCount: List[(String, Int)] = airportsData.map(_.split(",")(8)).groupBy(identity).mapValues { _.size }.toList
+  val groupByMapAirportsCount: List[(String, Int)] = airportsData.map(_.split(",")(8)).
+    groupBy(identity).mapValues { _.size }.toList
 
   /**
    * Applying ascending and descending sort to List of country names with airport count.
@@ -22,8 +23,10 @@ object Report {
   /**
    * Attaining top and bottom 10 airport countries.
    */
-  val topTenAirportCountries: List[(String, Int)] = reverseSortedCountries.take(10).map { case (code, count) => (countryFromCode(code), count) }
-  val bottomTenAirportsCountries: List[(String, Int)] = sortedCountries.take(10).map { case (code, count) => (countryFromCode(code), count) }
+  val topTenAirportCountries: List[(String, Int)] = reverseSortedCountries.take(10).
+    map { case (code, count) => (countryFromCode(code), count) }
+  val bottomTenAirportsCountries: List[(String, Int)] = sortedCountries.take(10).
+    map { case (code, count) => (countryFromCode(code), count) }
 
   /**
    * A map of airport id with the surface types.
